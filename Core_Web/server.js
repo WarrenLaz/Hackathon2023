@@ -1,7 +1,8 @@
 const http = require('http')
 const fs = require('fs')
+const express = require('express');
 const port = 3000
-
+const app = express();
 const server = http.createServer(function(req,res){
    res.writeHead(200, { 'Content-Type': 'text/html'})
    fs.readFile('/Users/warren_lazarraga/Programming_projects/Hackathon2023/Core_Web/core.html', function(error,data){
@@ -13,6 +14,7 @@ const server = http.createServer(function(req,res){
     }
     res.end()
    })
+   app.use(express.static( "/Users/warren_lazarraga/Programming_projects/Hackathon2023/Core_Web/core.css" ));
 })
 
 server.listen(port, function(error){
