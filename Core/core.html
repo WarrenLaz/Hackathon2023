@@ -5,13 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href='core.css' >
+    <script src="core.js"></script>
 </head>
 <body>
 
     <div class="topnav">
-        <a class="active" href="#Join_session"> Join Session</a>
-        <a href="#Start_session">Start Session</a>
+        <button class= "active" href="#Join_session" onclick= "showDiv()"> Join Session</a>
+        <button href="#Start_session" onclick="showDiv2()">Start Session</a>
+
     </div>
+    <center>
+        <div id="abc">
+           ENTER SESSION CODE:  <input type="text">
+        </div>
+    </center>
+
+    <center>
+        <div id="abc1">
+           <button onclick="generate()"> GENERATE CODE</button> <p id="code"></p>
+        </div>
+    </center>
 
 </body>
 </html>
